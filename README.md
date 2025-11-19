@@ -2,10 +2,16 @@
 This project builds a machine learning model that predicts whether a customer will respond to a marketing offer. It includes data exploration, model training, API development with FastAPI, containerization with Docker, and cloud deployment using Fly.io.
 
 ## Project Overview
-Businesses often waste marketing budget by sending offers to customers who are unlikely to respond. This project solves that by predicting response likelihood using customer demographics, purchase patterns, and past campaign interactions.
+Marketing campaigns often rely on reaching a large audience, many of whom may not respond to the offer. Sending campaigns to uninterested customers wastes money, resources, and reduces overall campaign efficiency. The challenge is to identify which customers are likely to respond to a marketing offer based on their past behavior, demographic profile, and purchasing patterns.
+This project develops a predictive model that estimates the probability of a customer responding to a marketing campaign. Using historical customer data, including purchases, previous campaign responses, demographics, and engagement metrics, multiple models were trained and evaluated (Linear Regression, Random Forest, XGBoost). The best-performing model (XGBoost) predicts the likelihood of a positive response for each customer.
+
+How it will be used:
+1. Businesses can target only those customers most likely to respond, saving money and increasing campaign ROI.
+2. The model is deployed as a FastAPI web service, allowing users to send customer data and receive a response probability and a binary recommendation (likely to respond or not).
+3. This solution enables data-driven decision-making in marketing strategy, turning raw customer data into actionable insights.
 
 ## Dataset
-The project uses the [Customer Marketing Campaign dataset]([url](https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign)) containing customer demographics, purchase behaviour, and previous campaign acceptance.
+The project uses the [Customer Marketing Campaign dataset]([url](https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign)) containing customer demographics, purchase behaviour, and previous campaign acceptance. This repository also contains the dataset in csv.
 
 ## Key Features
 - End-to-end ML pipeline
