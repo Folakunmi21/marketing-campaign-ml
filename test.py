@@ -1,6 +1,7 @@
 import requests
 
-url = 'http://localhost:9696/response'
+#url = 'http://localhost:9696/response'
+url = 'https://aged-dew-7973.fly.dev/response'
 
 customer = {
     "id": 202,

@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
-venv/
+.venv/
 env/
 ENV/
 
@@ -25,3 +25,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+model.bin
+uv.lock
