@@ -47,8 +47,8 @@ class Customer(BaseModel):
 
 #response
 class PredictResponse(BaseModel):
-    churn_probability: float
-    churn: bool
+    response_probability: float
+    will_respond: bool
 
 app = FastAPI(title="Marketing Campaign Response Predictor")
 with open ('model.bin', 'rb') as f_in:
@@ -56,7 +56,7 @@ with open ('model.bin', 'rb') as f_in:
 
 
 def predict_single(customer):
-    result = pipeline.predict_proba(customer)[0, 1]
+    result = pipeline.predict_proba([customer])[0, 1]
     return float(result)
 
 @app.post('/response')
@@ -64,8 +64,8 @@ def predict(customer: Customer) -> PredictResponse:
     prob = predict_single(customer.model_dump())
  
     return PredictResponse(
-        probability_response = prob,
-        response = prob >= 0.5
+        response_probability=prob,
+        will_respond = prob >= 0.5
     )
 
 if __name__ == "__main__":

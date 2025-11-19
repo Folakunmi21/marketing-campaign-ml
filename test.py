@@ -4,7 +4,7 @@ url = 'http://localhost:9696/response'
 
 customer = {
     "id": 202,
-    "education": "masters",
+    "education": "master",
     "marital_status": "single",
     "income": 82032.0,
     "kidhome": 0,
@@ -34,12 +34,22 @@ customer = {
     "previous_response_rate": 0.0
 }
 
-response = requests.post(url, json=customer)
-response_predictions = response.json()
-
-print('response:', response_predictions)
-
-if response_predictions['response'] > 0.5:
-    print('customer is likely to respond to offer')
-else:
-    print('customer is not likely to respond to offer')
+try:
+    response = requests.post(url, json=customer, timeout=5)
+    response.raise_for_status()
+    
+    result = response.json()
+    print('Response:', result)
+    print(f"Probability: {result['response_probability']:.1%}")
+    
+    if result['will_respond']:
+        print('Customer is likely to respond to the offer')
+    else:
+        print('Customer is not likely to respond to the offer')
+        
+except requests.exceptions.ConnectionError:
+    print('ERROR: Cannot connect to API. Is it running at http://localhost:9696?')
+except requests.exceptions.Timeout:
+    print('ERROR: Request timed out.')
+except Exception as e:
+    print(f'ERROR: {e}')
