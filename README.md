@@ -11,7 +11,7 @@ How it will be used:
 3. This solution enables data-driven decision-making in marketing strategy, turning raw customer data into actionable insights.
 
 ## Dataset
-The project uses the [Customer Marketing Campaign dataset]([url](https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign)) containing customer demographics, purchase behaviour, and previous campaign acceptance. This repository also contains the dataset in csv.
+The project uses the [Customer Marketing Campaign dataset](https://www.kaggle.com/datasets/rodsaldanha/arketing-campaign) containing customer demographics, purchase behaviour, and previous campaign acceptance. This repository also contains the dataset in csv.
 
 ## Key Features
 - End-to-end ML pipeline
