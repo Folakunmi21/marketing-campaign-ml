@@ -25,7 +25,7 @@ The project uses the [Customer Marketing Campaign dataset](https://www.kaggle.co
 
 **1. Clone the repository**
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Folakunmi21/marketing-campaign-ml.git
 cd marketing-campaign-ml
 ```
 
