@@ -22,46 +22,65 @@ The project uses the [Customer Marketing Campaign dataset](https://www.kaggle.co
 - Cloud deployment support (Fly.io)
 
 ## Installation
+
 **1. Clone the repository**
+```bash
 git clone <your-repo-url>
 cd marketing-campaign-ml
+```
 
 **2. Create & activate environment**
+```bash
 uv venv
 source .venv/bin/activate
+```
 
 **3. Install dependencies**
+```bash
 uv pip install -r requirements.txt
-
+```
 or (if using pyproject)
-
+```bash
 uv pip install .
+```
 
 ## Local Development
+
 **Run the API**
+```bash
 uvicorn response:app --host 0.0.0.0 --port 9696 --reload
+```
 
 **Test the API**
+```bash
 python test.py
+```
 
 You can also explore the interactive docs at:
+```
 http://localhost:9696/docs
+```
 
 ## Docker Usage
-**Build the image**
-docker build -t response-prediction .
 
-## Run the container
+**Build the image**
+```bash
+docker build -t response-prediction .
+```
+
+**Run the container**
+```bash
 docker run -p 9696:9696 response-prediction
+```
 
 ### Prediction Endpoint
-POST /response
 
-### Request body
-Customer data (validated via Pydantic).
+**POST** `/response`
 
+**Request body:** Customer data (validated via Pydantic).
 
 ## Technologies Used
+
 - Python 3.12+
 - FastAPI
 - XGBoost
