@@ -39,10 +39,6 @@ source .venv/bin/activate
 ```bash
 uv pip install -r requirements.txt
 ```
-or (if using pyproject)
-```bash
-uv pip install .
-```
 
 ## Local Development
 
