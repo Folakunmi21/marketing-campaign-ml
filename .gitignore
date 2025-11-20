@@ -25,6 +25,4 @@ Thumbs.db
 
 # Logs
 *.log
-
-model.bin
 uv.lock
