@@ -32,7 +32,8 @@ cd marketing-campaign-ml
 **2. Create & activate environment**
 ```bash
 uv venv
-source .venv/bin/activate
+source .venv/bin/activate (Linux/Mac)
+.venv\Scripts\activate (Windows)
 ```
 
 **3. Install dependencies**
@@ -44,7 +45,7 @@ uv pip install -r requirements.txt
 
 **Run the API**
 ```bash
-uvicorn response:app --host 0.0.0.0 --port 9696 --reload
+uvicorn response:app --host 0.0.0.0 --port 9696
 ```
 
 **Test the API**
