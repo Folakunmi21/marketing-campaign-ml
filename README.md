@@ -21,6 +21,21 @@ The project uses the [Customer Marketing Campaign dataset](https://www.kaggle.co
 - Docker-ready application
 - Cloud deployment support (Fly.io)
 
+## Prerequisites
+
+Before running this project, ensure you have:
+
+- **Docker Desktop** installed ([Download here](https://www.docker.com/products/docker-desktop))
+- **Python 3.12+** (for running test script)
+- **Git** (to clone the repository)
+
+### Verify Installation
+```bash
+docker --version
+python --version
+git --version
+```
+
 ## Installation
 
 **1. Clone the repository**
@@ -40,6 +55,7 @@ source .venv/bin/activate (Linux/Mac)
 ```bash
 uv pip install -r requirements.txt
 ```
+**Proceed to "local development" or "docker usage"**
 
 ## Local Development
 
